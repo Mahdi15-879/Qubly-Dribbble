@@ -1,0 +1,90 @@
+.footer {
+  padding: 10rem 0;
+
+  @include respond(tab-land) {
+    padding: 5rem 0;
+  }
+
+  &-body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 2rem;
+    align-items: start;
+    justify-items: center;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+
+    &:first-child {
+      font-size: 2rem;
+      font-weight: bolder;
+      color: $color-primary-dark;
+    }
+  }
+
+  &__link {
+    font-size: 1.7rem;
+    color: $color-primary-dark;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+      color: $color-primary;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 2rem;
+  }
+
+  &__cum {
+    display: inline-block;
+    margin-top: 2rem;
+    margin-right: 1rem;
+
+    img {
+      width: 2rem;
+      height: 2rem;
+      transition: transform 0.2s;
+
+      &:hover {
+          transform: scale(1.2);
+      }
+    }
+  }
+
+  &__column--last {
+    position: relative;
+
+    h3 {
+      font-size: 2rem;
+      font-weight: bolder;
+      color: $color-primary-dark;
+      margin-bottom: 1.5rem;
+    }
+
+    input {
+      position: absolute;
+
+      padding: 1rem 1.5rem;
+      border-radius: 3px;
+      border: 1px solid rgba($color: #8989a2, $alpha: 0.3);
+      box-shadow: 0 0.5rem 2rem rgb($color-black, 0.05);
+
+      &:focus {
+        outline: none;
+        border-bottom: 2px solid $color-primary;
+      }
+    }
+
+    img {
+      position: absolute;
+      right: -8rem;
+      top: 5rem;
+      cursor: pointer;
+    }
+  }
+}

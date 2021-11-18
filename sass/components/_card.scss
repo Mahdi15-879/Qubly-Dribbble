@@ -1,0 +1,68 @@
+.card {
+  width: 85%;
+  height: 50rem;
+  background-color: $color-white;
+  position: absolute;
+  top: -5rem;
+  box-shadow: 0 0.5rem 1rem rgba($color-black, 0.09);
+  border: 1px solid $color-primary-light;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  h2 {
+    padding: 2rem 0;
+  }
+
+  input {
+    width: 80%;
+    padding: 1.4rem 2rem;
+    border-radius: 3px;
+    border: 1px solid rgba($color: #8989a2, $alpha: 0.5);
+    margin-bottom: 1.5rem;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgb($color-primary, 0.1);
+      border-bottom: 3px solid $color-primary;
+    }
+
+    &:focus:invalid {
+      border-bottom: 3px solid rgb(89, 218, 89);
+    }
+
+    &::-webkit-input-placeholder {
+      font-size: 1.5rem;
+      color: rgb(161, 154, 154);
+    }
+  }
+
+  button {
+    border-radius: 3px;
+    width: 80%;
+    padding: 1.4rem 2rem;
+    cursor: pointer;
+  }
+
+  h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    padding: 2rem 0;
+  }
+
+  figure {
+    border-bottom: 1px solid rgba($color: #8989a2, $alpha: 0.5);
+    padding-bottom: 3rem;
+    text-align: center;
+    width: 80%;
+  }
+
+  p a {
+    text-decoration: underline;
+    color: rgb(59, 117, 194);
+    padding: 1.2rem 0;
+  }
+}

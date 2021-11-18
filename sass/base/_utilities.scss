@@ -1,0 +1,13 @@
+.m-right-small {
+  margin-right: 1.5rem;
+}
+
+.container {
+  padding: 0 15rem;
+  margin: 0 auto;
+
+  @include respond(tab-land) {
+    padding: 0;
+    width: 85vw;
+  }
+}

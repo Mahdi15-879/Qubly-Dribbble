@@ -1,0 +1,58 @@
+.header {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, $color-white, $color-secondary);
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+
+  @include respond(tab-land) {
+    height: auto;
+    background-image: linear-gradient(
+      to bottom,
+      $color-white,
+      $color-secondary
+    );
+    clip-path: none;
+  }
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 5rem;
+
+  &__content {
+    width: 50%;
+    display: grid;
+    grid-row-gap: 3rem;
+    justify-items: start;
+  }
+
+  &__banner-box {
+    width: 50%;
+    img {
+      width: 100%;
+    }
+  }
+
+  @include respond(tab-land) {
+    padding-bottom: 5rem;
+  }
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+
+    &__content {
+      width: 100%;
+      order: 1;
+      padding-bottom: 6rem;
+    }
+
+    &__banner-box {
+      width: 100%;
+      order: 0;
+    }
+  }
+}
